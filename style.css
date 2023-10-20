@@ -1,0 +1,45 @@
+/* Обнуление отступов и марж внутри контейнера */
+body, div, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: hotpink;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+/* Задаем общий стиль для контейнера */
+.container {
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Задаем стиль для каждой колонки (col) */
+.col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Задаем стиль для текста внутри колонки */
+.col p {
+    width: 100%; /* Ширина текста равна ширине колонки */
+}
+
+/* Задаем стиль для маленьких изображений */
+.smallImg {
+    width: 22%;
+    max-width: 22%; /* Максимальная ширина для smallImg */
+}
+
+/* Задаем стиль для фотографий */
+.col img:not(.smallImg) {
+    width: 60%;
+    max-width: 60%; /* Максимальная ширина для центральных изображений */
+    height: auto;
+}
+p{
+    margin-bottom: 10px;
+}
+
