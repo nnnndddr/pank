@@ -1,5 +1,5 @@
 /* Обнуление отступов и марж внутри контейнера */
-body, div, p {
+body, div, p,h1 {
     margin: 0;
     padding: 0;
     text-align: center;
