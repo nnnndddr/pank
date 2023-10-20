@@ -20,3 +20,29 @@ checkCompatibilityButton.addEventListener('click', function() {
         alert('Вы не совместимы');
     }
 });
+
+const slider = document.querySelector('.slider');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const slideWidth = document.querySelector('.slide').offsetWidth;
+let currentIndex = 0;
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentIndex < 4) {
+        currentIndex++;
+        updateSlider();
+    }
+});
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+updateSlider();
