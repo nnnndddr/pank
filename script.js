@@ -32,11 +32,19 @@ prevButton.addEventListener('click', () => {
         currentIndex--;
         updateSlider();
     }
+    if (currentIndex == 0){
+        currentIndex = 4;
+        updateSlider();
+    }
 });
 
 nextButton.addEventListener('click', () => {
     if (currentIndex < 4) {
         currentIndex++;
+        updateSlider();
+    }
+    if (currentIndex == 4){
+        currentIndex = 0;
         updateSlider();
     }
 });
